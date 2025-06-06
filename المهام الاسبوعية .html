@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جدول المهام الأسبوعية</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* إعادة تعيين الهوامش والحشو */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #6c9985;
+            color: #333;
+        }
+
+        /* الصورة في الأعلى */
+        header {
+            position: relative;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .header-image {
+            width: 100%;
+            height: 300px; /* ارتفاع الصورة */
+            object-fit: cover;
+            box-shadow: 0 0 20px 10px rgba(37, 1, 238, 0.5); /* إطار متوهج */
+        }
+
+        header h1 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: #fff;
+            font-size: 3em;
+            text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #2807e2, 0 0 40px #6806c4; /* توهج للنص */
+        }
+
+        /* محتوى الأيام */
+        #days {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end; /* محاذاة الأيام إلى اليمين */
+            margin: 20px;
+        }
+
+        .day {
+            width: 80%; /* عرض الأيام */
+            max-width: 600px; /* أقصى عرض للأيام */
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 10px;
+            text-align: right; /* محاذاة النص إلى اليمين */
+            box-shadow: 0 0 10px rgba(91, 65, 65, 0.2); /* ظل خفيف */
+        }
+
+        .day h2 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .day textarea {
+            width: 100%;
+            height: 100px;
+            margin-top: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            resize: none; /* منع تغيير حجم مربع النص */
+        }
+
+        .save-button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* توهج للزر */
+        }
+
+        .save-button:hover {
+            background-color: #d30808;
+            box-shadow: 0 0 10px rgba(55, 9, 123, 0.2); /* ظل خفيف */
+        }
+
+        /* تذييل الصفحة */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 20px;
+        }
+
+        .glow-link {
+            color: #fff;
+            text-decoration: none;
+            text-shadow: 0 0 5px #fff, 0 0 10px #ff00de; /* توهج للروابط */
+        }
+
+        .glow-link:hover {
+            color: #ff00de;
+        }
+
+        /* نص متحرك */
+        .floating-text {
+            text-align: center;
+            font-size: 1.5em;
+            color: #333;
+            animation: float 3s ease-in-out infinite; /* تحريك النص */
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0); /* النص في مكانه الطبيعي */
+            }
+            50% {
+                transform: translateY(-10px); /* النص يتحرك لأعلى */
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- الصورة في الأعلى -->
+    <header>
+        <img src="img BB.jpg" alt="صورة خلفية" class="header-image">
+        <h1>إنجاز المهام الأسبوعية</h1>
+        <h2>Abdullah Almanaseer</h2>
+    </header>
+
+    <!-- محتوى الأيام -->
+    <section id="days">
+        <div class="day" style="background-color: #ffcccc;">
+            <h2>السبت</h2>
+            <textarea placeholder="أدخل المهام هنا..."></textarea>
+            <button class="save-button">حفظ المهام</button>
+        </div>
+        <div class="day" style="background-color: #ffcc99;">
+            <h2>الأحد</h2>
+            <textarea placeholder="أدخل المهام هنا..."></textarea>
+            <button class="save-button">حفظ المهام</button>
+        </div>
+        <div class="day" style="background-color: #ffffcc;">
+            <h2>الإثنين</h2>
+            <textarea placeholder="أدخل المهام هنا..."></textarea>
+            <button class="save-button">حفظ المهام</button>
+        </div>
+        <div class="day" style="background-color: #ccffcc;">
+            <h2>الثلاثاء</h2>
+            <textarea placeholder="أدخل المهام هنا..."></textarea>
+            <button class="save-button">حفظ المهام</button>
+        </div>
+        <div class="day" style="background-color: #ccffff;">
+            <h2>الأربعاء</h2>
+            <textarea placeholder="أدخل المهام هنا..."></textarea>
+            <button class="save-button">حفظ المهام</button>
+        </div>
+        <div class="day" style="background-color: #ccccff;">
+            <h2>الخميس</h2>
+            <textarea placeholder="أدخل المهام هنا..."></textarea>
+            <button class="save-button">حفظ المهام</button>
+        </div>
+        <div class="day" style="background-color: #ffccff;">
+            <h2>الجمعة</h2>
+            <textarea placeholder="أدخل المهام هنا..."></textarea>
+            <button class="save-button">حفظ المهام</button>
+        </div>
+    </section>
+
+    <!-- زر "تم الإنجاز" -->
+    <div class="button-container">
+        <button class="glow-button">تم الإنجاز</button>
+    </div>
+
+    <!-- نص متحرك -->
+    <p class="floating-text">العبـرة في الاستمرارية لا الاستسلام للظروف</p>
+
+    <!-- تذييل الصفحة -->
+    <footer>
+        <p>للتواصل: <a href="mailto:balmnasyr162@gmail.com" class="glow-link">balmnasyr162@gmail.com</a> | 
+        <a href="https://facebook.com" class="glow-link">فيسبوك</a></p>
+    </footer>
+</body>
+</html>

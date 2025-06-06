@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>الموقع الشخصي</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* تنسيق عام */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      color: #2c3e50;
+      background: #f8f9fa;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* تنسيق العنوان */
+    header {
+      background: linear-gradient(45deg, #1b88c7, #00a8ff);
+      color: white;
+      text-align: center;
+      padding: 60px 0;
+    }
+
+    header h1 {
+      margin: 15px 0;
+      font-size: 2.5rem;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* تنسيق الصور */
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid white;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    /* تنسيق الأقسام */
+    section {
+      padding: 60px 0;
+    }
+
+    section h2 {
+      text-align: right;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #1b88c7;
+      position: relative;
+    }
+
+    section h2::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -10px;
+      width: 60px;
+      height: 3px;
+      background: #00a8ff;
+    }
+
+    /* تنسيق المهارات */
+    #skills ul {
+      list-style: none;
+      padding: 0;
+      text-align: right;
+    }
+
+    #skills ul li {
+      display: inline-block;
+      margin: 5px;
+      background: #1b88c7;
+      padding: 12px 25px;
+      border-radius: 25px;
+      color: white;
+      font-size: 0.9rem;
+      transition: all 0.3s ease;
+    }
+
+    #skills ul li:hover {
+      background: #00a8ff;
+      transform: translateY(-3px);
+    }
+
+    /* تنسيق المشاريع والخدمات */
+    .project, .service {
+      background: white;
+      padding: 25px;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+
+    .project:hover, .service:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+
+    /* تنسيق التواصل */
+    #contact {
+      background: #f1f3f5;
+    }
+
+    #contact a {
+      color: #1b88c7;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    #contact a:hover {
+      color: #00a8ff;
+      text-decoration: underline;
+    }
+    footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: 40px;
+}
+#web-services {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.service-card h3 {
+  color: #1b88c7;
+  margin-bottom: 15px;
+}
+
+.service-card p {
+  color: #666;
+  line-height: 1.6;
+}
+body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    /* تنسيق متجاوب للصور */
+    .profile-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 50%;
+    }
+
+    /* تنسيق متجاوب للقوائم */
+    #skills ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    #skills ul li {
+      padding: 10px 20px;
+      background: #1b88c7;
+      color: white;
+      border-radius: 5px;
+    }
+
+    /* تنسيق متجاوب للشبكات */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    /* تنسيق متجاوب للنصوص */
+    h1, h2, h3 {
+      text-align: center;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        width: 95%;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      h2 {
+        font-size: 1.3rem;
+      }
+    }
+/* تنسيق قسم التواصل */
+#contact {
+  background: #f8f9fa;
+  padding: 40px 0;
+}
+
+.contact-info {
+  text-align: center;
+}
+
+.contact-info p {
+  margin: 10px 0;
+  font-size: 1.1rem;
+}
+
+.contact-info a {
+  color: #1b88c7;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
+  </style>
+</head>
+<body>
+    
+  <header>
+    <div class="container">
+      <img src="js img.jpg" alt="الصورة الشخصية" class="profile-img">
+      <img src="img jss.jpg" alt="الصورة الشخصية" class="profile-img">
+ <h1>Abdullah Al.manaseer</h1>
+  <p>مطور ويب </p>
+</div>
+  </header>
+  <section id="about">
+    <div class="container">
+      <h2>نبذة عني</h2>
+      <p>مطور ويب  واجهات امامية HTML ,CSS ,JAVA SCRIPT + PHP اهلا وسهلا بكم</p>
+    </div>
+  </section>
+  <section id="skills">
+    <div class="container">
+      <h2>المهارات</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+  </section>
+  <section id="projects">
+    <div class="container">
+      <h2>المشاريع</h2>
+      <div class="project">
+        <h3>مشروع 1</h3>
+        <p>وصف قصير للمشروع الأول.</p>
+      </div>
+      <div class="project">
+        <h3>مشروع 2</h3>
+        <p>وصف قصير للمشروع الثاني.</p>
+      </div>
+    </div>
+  </section>
+ 
+  
+
+  <section id="web-services">
+    <div class="container">
+      <h2>الخدمات تخص الويب</h2>
+      <div class="service-grid">
+        <div class="service-card">
+          <h3>تصميم مواقع ويب</h3>
+          <p>تصميم مواقع احترافية بتصميم عصري وجذاب يتوافق مع جميع الأجهزة.</p>
+        </div>
+        <div class="service-card">
+          <h3>تطوير تطبيقات الويب</h3>
+          <p>بناء تطبيقات ويب متقدمة باستخدام أحدث التقنيات البرمجية.</p>
+        </div>
+        <div class="service-card">
+          <h3>تحسين SEO</h3>
+          <p>تحسين محركات البحث لزيادة ظهور موقعك في نتائج البحث.</p>
+        </div>
+        <div class="service-card">
+          <h3>صيانة المواقع</h3>
+          <p>تقديم خدمات صيانة دورية لضمان استمرارية عمل موقعك بشكل مثالي.</p>
+        </div>
+        <section id="contact">
+            <div class="container">
+              <h2>التواصل</h2>
+              <div class="contact-info">
+                <p>البريد الإلكتروني: <a href="mailto:balmnasyr162@gmail.com">balmnasyr162@gmail.com</a></p>
+              </div>
+            </div>
+          </section>
+          
+</body>
+</html>
