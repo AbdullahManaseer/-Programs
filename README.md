@@ -1,0 +1,1 @@
+https://app.netlify.com/projects/remarkable-panda-f7c4d3/configuration/deploys            https://vercel.com/abdullahmanaseers-projects/programs         https://vercel.com/abdullahmanaseers-projects/abdullah-website
